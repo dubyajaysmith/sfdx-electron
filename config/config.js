@@ -1,6 +1,7 @@
 const joinPath = require('path').join
 const fs = require('fs')
 const shell = require('shelljs')
+shell.config.execPath = shell.which('node') // shelljs workaround for electron
 
 const localConfigPath = joinPath(shell.pwd().stdout, 'config')
 
